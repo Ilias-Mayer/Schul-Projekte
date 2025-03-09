@@ -1,1 +1,1 @@
-# Taschen--BMI-Rechner
+# Taschen-BMI-Rechner
