@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>Taschenrechner & BMI</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Taschenrechner (erlaubt negative Zahlen) -->
+        <div class="rechner-box">
+            <h2>🧮 Taschenrechner</h2>
+            <input type="number" id="zahl1" placeholder="Erste Zahl"> 
+            <input type="number" id="zahl2" placeholder="Zweite Zahl"> 
+            <button onclick="berechnen()">BERECHNEN</button>
+            <div id="taschenrechner-ausgabe" class="ausgabe"></div>
+        </div>
+
+        <!-- BMI-Rechner (blockiert negative Werte) -->
+        <div class="rechner-box">
+            <h2>⚖️ BMI-Rechner</h2>
+            <input type="number" id="groesse" placeholder="Größe in cm" min="1" step="1">
+            <input type="number" id="gewicht" placeholder="Gewicht in kg" min="1" step="0.1">
+            <button onclick="berechneBMI()">BMI BERECHNEN</button>
+            <div id="bmi-ausgabe" class="ausgabe"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
