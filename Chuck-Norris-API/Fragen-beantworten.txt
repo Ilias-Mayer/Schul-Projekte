@@ -1,0 +1,19 @@
+Was macht das Schlüsselwort "async"?
+Das async-Schlüsselwort vor einer Funktion kennzeichnet sie als asynchron. Solche Funktionen geben automatisch ein Promise zurück. Mit await im Funktionskörper kann man auf das Ergebnis eines Promises warten, ohne den restlichen Code anzuhalten – ideal für nicht-blockierende Abläufe.
+
+Wie funktioniert die Funktion "fetch"?
+Die fetch()-Funktion ist eine moderne Web-API, die HTTP-Anfragen durchführt. Sie nimmt als ersten Parameter die URL als String entgegen, an die die Anfrage gesendet werden soll. Optional kann als zweiter Parameter ein Objekt mit Konfigurationsoptionen übergeben werden (z.B. Methode, Header, Body). fetch() gibt ein Promise zurück, das sich in ein Response-Objekt auflöst, sobald die Antwort vom Server verfügbar ist.
+
+Was macht "response.json()" und was ist JSON überhaupt?
+Die Methode response.json() liest den Antworttext und interpretiert ihn als JSON. Sie gibt ein Promise zurück, das sich in das geparste JSON-Objekt auflöst.
+JSON ist ein kompaktes Datenformat, basierend auf JavaScript-Objekten. Es nutzt Name-Wert-Paare, ist einfach lesbar und maschinenfreundlich. Der Standard für Webdaten. Es ist eines der am häufigsten verwendeten Formate für den Datenaustausch im Web.
+
+Wieso wird hier try...catch eingesetzt?
+Der try...catch-Block wird verwendet, um Fehler abzufangen, die während der asynchronen Operationen auftreten können. In diesem Fall könnten Fehler auftreten, wenn:
+
+- Die Netzwerkanfrage fehlschlägt (z.B. bei fehlender Internetverbindung)
+- Die API nicht erreichbar ist
+- Die Antwort kein gültiges JSON enthält
+- Beim Manipulieren des DOM ein Fehler auftritt
+
+Durch den catch-Block wird sichergestellt, dass die Anwendung nicht abstürzt und der Benutzer eine hilfreiche Fehlermeldung erhält.

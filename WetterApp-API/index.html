@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wetter App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Wetter App</h1>
+        <div class="input-group">
+            <input type="text" id="stadtInput" placeholder="Stadt eingeben">
+            <button id="wetterButton">Wetter abrufen</button>
+        </div>
+        <div id="wetterContainer" class="wetter-info hidden">
+            <h2 id="stadtName">Stadt</h2>
+            <p id="beschreibung">Beschreibung</p>
+            <div class="wetter-details">
+                <div class="detail-box">
+                    <strong>Temperatur</strong>
+                    <p id="temperatur">--°C</p>
+                </div>
+                <div class="detail-box">
+                    <strong>Gefühlt</strong>
+                    <p id="gefuehlt">--°C</p>
+                </div>
+                <div class="detail-box">
+                    <strong>Luftfeuchtigkeit</strong>
+                    <p id="luftfeuchtigkeit">--%</p>
+                </div>
+                <div class="detail-box">
+                    <strong>Windgeschwindigkeit</strong>
+                    <p id="wind">-- km/h</p>
+                </div>
+            </div>
+        </div>
+        <div id="fehlerContainer" class="wetter-info hidden">
+            <p id="fehlerText">Fehler beim Laden der Wetterdaten.</p>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
